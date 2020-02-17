@@ -1,5 +1,47 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Deuces
+
+A recreation of the card game Deuces, in a React/Redux web application with a Rails API backend.
+
+This repository is the React/Redux frontend, and is deployed on Heroku at [Deuces](https://deuces-card-game.herokuapp.com/)
+
+The backend is available at [Heroku](https://deuces-backend.herokuapp.com/) [Github](https://github.com/jk-me/deuces-back)
+
+An older version of this application in a single repository is available on [Github](https://github.com/jk-me/deuces)
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+This app is built on the npm packages listed in client/package.json
+
+### Installing
+
+To start this application on a local server, run the following commands in your terminal after cloning this repository to your local environment and navigating to its root directory.
+
+```
+$ npm i
+$ npm start -p 3000
+```
+
+Then navigate to localhost:3000 in your web browser.
+
+A locally run version of this frontend will use the deployed backend for data. To use a local backend, change the `apiurl` variable in `src/actions/gameActions.js` to the local server url.
+
+## Author
+
+* **Jenny Kam**
+ [jk-me](https://github.com/jk-me)
+ * **Blog:** [deuces](https://jk-me.github.io/react_redux_final_project)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
+
+
 ## Available Scripts
 
 In the project directory, you can run:
