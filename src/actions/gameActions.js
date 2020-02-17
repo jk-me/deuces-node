@@ -1,8 +1,9 @@
 // const apiurl = 'http://localhost:3001'
+const apiurl = 'https://deuces-backend.herokuapp.com'
 
 export function fetchGames(){
   return dispatch =>{
-    fetch('/games')
+    fetch(`${apiurl}/games`)
       .then(resp => resp.json())
       .then(data => dispatch({type:'FETCH_SESSIONS', sessions: data}))
   }
@@ -26,7 +27,7 @@ export function saveDeck(deckData){
     body: JSON.stringify(deckData)
   }
   return dispatch=>{
-    fetch('/games', data)
+    fetch(`${apiurl}/games`, data)
       .then(resp => resp.json())
       .then(deck => dispatch({type: 'SAVE_NEW_SESSION', payload: deck}))
       .catch(err=>err)
@@ -61,7 +62,7 @@ export function gameWon(gameData, gameId){
     body: JSON.stringify(gameData)
   }
   return dispatch =>{
-    fetch(`/games/${gameId}`, data)
+    fetch(`${apiurl}/games/${gameId}`, data)
       .then(resp => resp.json())
       .then(game => {
         dispatch({type: 'UPDATE_SESSION', payload: game})})
@@ -78,7 +79,7 @@ export function deleteSess(gameId){
     }
   }
   return dispatch =>{
-    fetch(`/games/${gameId}`, data)
+    fetch(`${apiurl}/games/${gameId}`, data)
     .then(resp => resp.json())
     .then(games =>{
       dispatch({type: 'FETCH_SESSIONS', sessions:games})
