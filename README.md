@@ -6,7 +6,7 @@ A recreation of the card game Deuces, in a React/Redux web application with a Ra
 
 This repository is the React/Redux frontend, and is deployed on Heroku at [Deuces](https://deuces-card-game.herokuapp.com/)
 
-The backend is available at [Heroku](https://deuces-backend.herokuapp.com/) [Github](https://github.com/jk-me/deuces-back)
+The backend is available on [Heroku](https://deuces-backend.herokuapp.com/) and [Github](https://github.com/jk-me/deuces-back)
 
 An older version of this application in a single repository is available on [Github](https://github.com/jk-me/deuces)
 
@@ -29,7 +29,7 @@ $ npm start -p 3000
 
 Then navigate to localhost:3000 in your web browser.
 
-A locally run version of this frontend will use the deployed backend for data. To use a local backend, change the `apiurl` variable in `src/actions/gameActions.js` to the local server url.
+A locally run version of this frontend will use the Heroku backend for data. To use a local backend, change the `apiurl` variable in `src/actions/gameActions.js` to the local server url.
 
 ## Author
 
