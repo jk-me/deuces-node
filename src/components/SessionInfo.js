@@ -14,7 +14,7 @@ class SessionInfo extends React.Component{
     this.props.sessions.sort((a,b) =>{ return a.id - b.id})
     return this.props.sessions.map(s =>{
       return (
-        <SessionTableRow s={s} deleteSess={this.props.deleteSess}/>
+        <SessionTableRow session={s} deleteSess={this.props.deleteSess}/>
       )
     })
   }
@@ -25,13 +25,13 @@ class SessionInfo extends React.Component{
         <h2>Previous Game Data</h2>
         <Table bordered striped variant='dark'>
           <thead>
-          <tr>
-            <th>Session</th>
-            <th>Player 1 wins</th>
-            <th>Player 2 wins</th>
-            <th>Total games</th>
-            <th>Remove session</th>
-          </tr>
+            <tr>
+              <th>Session</th>
+              <th>Player 1 wins</th>
+              <th>Player 2 wins</th>
+              <th>Total games</th>
+              <th>Remove session</th>
+            </tr>
           </thead>
           <tbody>
           {this.renderTableRows()}

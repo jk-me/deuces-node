@@ -11,12 +11,13 @@ class SessionTableRow  extends React.Component{
   }
 
   render(){
+    const {session} = this.props
     return (
       <tr>
-        <td>{this.props.s.id}</td>
-        <td>{this.props.s.hand1*1}</td>
-        <td>{this.props.s.hand2*1}</td>
-        <td>{this.props.s.hand1 + this.props.s.hand2}</td>
+        <td>{session.id}</td>
+        <td>{session.hand1*1}</td>
+        <td>{session.hand2*1}</td>
+        <td>{session.hand1 + session.hand2}</td>
         <td>
           <Button className='button' variant='outline-light' onClick={this.click}>Delete</Button>
         </td>
